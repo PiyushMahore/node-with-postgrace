@@ -48,3 +48,5 @@ app.get('/get-user', async (req, res) => {
 app.listen(Port, () => {
     console.log("Server is running at Port", Port);
 });
+
+export default postgrace;

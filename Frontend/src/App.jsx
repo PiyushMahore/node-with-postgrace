@@ -11,7 +11,7 @@ export default function App() {
 
   const handleAddUser = async () => {
     try {
-      await axios.post("http://localhost:8000/add-user", form);
+      await axios.post("http://localhost:8080/users", form);
       alert("User added!");
     } catch (err) {
       alert("Error adding user");
@@ -20,7 +20,7 @@ export default function App() {
 
   const handleGetUsers = async () => {
     try {
-      const res = await axios.get("http://localhost:8000/get-user");
+      const res = await axios.get("http://localhost:8080/users");
       setUsers(res.data);
     } catch (err) {
       alert("Error fetching users");
